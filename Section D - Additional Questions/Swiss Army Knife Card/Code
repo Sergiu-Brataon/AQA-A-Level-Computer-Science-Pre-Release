@@ -224,7 +224,7 @@ class Breakthrough():
         return Choice
 
     def __AddSwissArmyKnifeCardsToDeck(self):
-        for Count in range(20):
+        for Count in range(1):
             self.__Deck.AddCard(SwissArmyKnifeCard())
     
     def __AddDifficultyCardsToDeck(self):
@@ -376,16 +376,6 @@ class ToolCard(Card):
     def GetDescription(self):
         return self._ToolType + " " + self._Kit
 
-    # new
-
-    def SetDescription(self, Choice):
-        if len(Choice) == 1:
-            self._Kit = Choice
-        elif len(Choice) == 2:
-            self._ToolType = Choice[0]
-            self._Kit = Choice[1]
-
-    # end new
 
 class SwissArmyKnifeCard(ToolCard):
     def __init__(self, *args):
@@ -403,6 +393,17 @@ class SwissArmyKnifeCard(ToolCard):
 
     def GetDescription(self):
         return self._ToolType + " " + self._Kit
+
+    # new
+
+    def SetDescription(self, Choice):
+        if len(Choice) == 1:
+            self._Kit = Choice
+        elif len(Choice) == 2:
+            self._ToolType = Choice[0]
+            self._Kit = Choice[1]
+
+    # end new
         
 
 class DifficultyCard(Card):
