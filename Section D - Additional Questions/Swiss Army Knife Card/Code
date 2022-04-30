@@ -395,14 +395,12 @@ class SwissArmyKnifeCard(ToolCard):
         return self._ToolType + " " + self._Kit
 
     # new
-
     def SetDescription(self, Choice):
         if len(Choice) == 1:
             self._Kit = Choice
         elif len(Choice) == 2:
             self._ToolType = Choice[0]
             self._Kit = Choice[1]
-
     # end new
         
 
