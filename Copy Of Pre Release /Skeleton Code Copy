@@ -468,3 +468,5 @@ class CardCollection():
 
 if __name__ == "__main__":
     Main()
+
+print("hello")
